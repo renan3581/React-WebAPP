@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import Stateful from './Exemplos/ExemploStateful';
+import Usestate from './Exemplos/usestate';
 ;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Stateful />
+    <Usestate />
   </React.StrictMode>
 );
 
