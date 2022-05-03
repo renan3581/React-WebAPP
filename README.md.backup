@@ -118,7 +118,7 @@ function HelloWorldComponent(){
 
 <br/>
 
-## Flux:
+### Flux:
 
 - É uma arquitetura criada para comunicação entre componentes.
 - Flux é um padrão de trafego de dados unidirecional.

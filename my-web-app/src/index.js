@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import Usestate from './Exemplos/usestate';
-import SorveteForm from './Exemplos/formularioReactComplexo';
+import Counter from './ExemploRedux/counter';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { reducer } from './redux/reducers';
+ 
 
-import Form from './Exemplos/formularioReact';
-;
+const store = createStore(
+  reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() //Conecta o Redux com o devtools do navegador.
+);//Cria a store.
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    < SorveteForm />
-  </React.StrictMode>
-);
-
+  <Provider store={store}> 
+    < Counter />
+  </Provider>
+);//Provider é o componente que conecta o Redux com o React.
